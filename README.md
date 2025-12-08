@@ -8,8 +8,7 @@ Additionally, it offers an easy way of setting up a tab that integrates with the
 ## Notes
 When creating or linking both a tab and content frame through the library the content frame will automatically be shown or hidden when your tab is active.
 Both the tab and content frame will have an attribute called 'displayMode' which contains the ID for your tab and frame.
-Registering a callback for "QuestLog.SetDisplayMode", you can compare your ID with the payload to determine if your tab was selected or not.
-Alternatively, when using a custom Mixin you can react in your SetChecked function for true or false, and react accordingly.
+Using a custom Mixin you can react in your SetChecked function for true or false, and react accordingly.
 
 When creating a tab from a template or providing a completely custom tab it is **required** to have a SetChecked function, even if it contains no functionality.
 It is highly advised to inherit from "LargeSideTabButtonTemplate" for functionality and a similar appearance to the offical tabs.
