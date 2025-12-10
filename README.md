@@ -1,5 +1,5 @@
-WorldMapTabsLib by LanceDH
-Source: https://github.com/LanceDH/WorldMapTabsLib
+LibWorldMapTabs by LanceDH
+Source: https://github.com/LanceDH/LibWorldMapTabs
 
 ## Purpose
 World Map Tabs Lib allows for multiple add-ons to share the tab space on the world map UI without worry about overlapping each other.
@@ -12,13 +12,13 @@ Using a custom Mixin you can react in your SetChecked function for true or false
 
 When creating a tab from a template or providing a completely custom tab it is **required** to have a SetChecked function, even if it contains no functionality.
 It is highly advised to inherit from "LargeSideTabButtonTemplate" for functionality and a similar appearance to the offical tabs.
-This library contains a Mixin called WMTL_DefaultTabMixin which can be used with "LargeSideTabButtonTemplate" to provide support for textures, as well as not requiring an inactive variant of the active texure or atlas.
+This library contains a Mixin called LWMT_DefaultTabMixin which can be used with "LargeSideTabButtonTemplate" to provide support for textures, as well as not requiring an inactive variant of the active texure or atlas.
 
 
 ## Example setups
 ### Out of the box:
 ```lua
-local tabLib = LibStub("WorldMapTabsLib-1.0");
+local tabLib = LibStub("LibWorldMapTabs-1.0");
 local tabData = {
 	tooltipText = "Test Tab";
 	activeTexture = "Interface/ICONS/Spell_nature_polymorph";
@@ -61,7 +61,7 @@ tabLib:CreateContentFrameForTab(newTab, "XmlFrameTemplate");
 ### Pre-made frames
 Note: The tab needs to have a SetChecked(checked) function
 ```lua
-local tabLib = LibStub("WorldMapTabsLib-1.0");
+local tabLib = LibStub("LibWorldMapTabs-1.0");
 tabLib:AddCustomTab(XmlCreatedTab);
 tabLib:LinkTabToContentFrame(XmlCreatedTab, XmlCreatedFrame);
 ```
