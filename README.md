@@ -18,7 +18,7 @@ This library contains a Mixin called LWMT_DefaultTabMixin which can be used with
 ## Example setups
 ### Out of the box:
 ```lua
-local tabLib = LibStub("LibWorldMapTabs-1.0");
+local tabLib = LibStub("LibWorldMapTabs");
 local tabData = {
 	tooltipText = "Test Tab";
 	activeTexture = "Interface/ICONS/Spell_nature_polymorph";
@@ -61,7 +61,7 @@ tabLib:CreateContentFrameForTab(newTab, "XmlFrameTemplate");
 ### Pre-made frames
 Note: The tab needs to have a SetChecked(checked) function
 ```lua
-local tabLib = LibStub("LibWorldMapTabs-1.0");
+local tabLib = LibStub("LibWorldMapTabs");
 tabLib:AddCustomTab(XmlCreatedTab);
 tabLib:LinkTabToContentFrame(XmlCreatedTab, XmlCreatedFrame);
 ```
