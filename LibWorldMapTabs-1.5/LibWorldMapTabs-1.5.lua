@@ -174,9 +174,10 @@ function lib.internal:OnHideInternal(tab, ...)
 	lib.internal:PlaceTabs();
 end
 
-
 function lib.internal:WorldMapOnShow(...)
+	-- Place instantly, and again with a delay in case because some addons might place their button on WorldMapOnShow
 	lib.internal:PlaceTabs();
+	C_Timer.After(0, function() lib.internal:PlaceTabs(); end);
 
 	if (not lib.tabs) then return end
 	-- If the tab for the currently active content is hidden, default back to official quests
